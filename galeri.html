@@ -1,0 +1,11 @@
+<b id="seleksi">Ketikkan kata untuk seleksi :</b><br>
+<input id="kunci" type="text" ng-model="seleksi" placeholder="ketik disini">
+
+<div ng-controller="operasi" class="gbr">
+    <div ng-repeat="g in gambar | filter: seleksi">
+        <figure>
+            <img src="gambar/{{g}}.jpg" alt="gambar {{}g}">
+            <figcaption>gambar model :{{g}}</figcaption>
+        </figure>
+    </div>
+</div>
